@@ -18,7 +18,7 @@ class Cercle:
         self.rayon = 0
                 
     def circonférence(self,aire,circonférense):
-        circonférense = circonférense + self.rayon + aire 
+        circonférense = 2 
         return(circonférense)
     
     def aire(self, aire, ciconférense):

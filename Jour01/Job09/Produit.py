@@ -14,5 +14,5 @@ class Produit:
 instance2 = Produit("Euro",9,7)
 instance = Produit(9,7,10)
 
-print(instance2.afficher())
+instance2.afficher()
 print(instance.CalculerPrixTTC())
