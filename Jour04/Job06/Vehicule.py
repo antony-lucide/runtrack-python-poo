@@ -10,7 +10,8 @@ class Vehicule:
     
 class Voiture(Vehicule):
     
-    def __init__(self, marque, année, prix):
+    def __init__(self):
+       Vehicule.__init__(self)
        self.portes = 4
      
     

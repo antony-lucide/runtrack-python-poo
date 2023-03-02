@@ -6,7 +6,11 @@ class Forme:
     def air(self,largeur,hauteur):
         return 0
     
-class Rectangle(Forme): 
+class Rectangle(Forme):
+
+    def __init__(self, largeur, hauteur):
+        Forme.__init__(self,largeur,hauteur) 
+
     def air(self):
         self.aire =  self.largeur * self.hauteur
         return(self.aire)
