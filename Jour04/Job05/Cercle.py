@@ -1,6 +1,10 @@
-class Forme:
+import math
 
-    def air(self,largeur,hauteur):
+class Forme:
+    def __init__(self) -> None:
+        pass
+
+    def air(self):
         return 0
     
 class Rectangle(Forme): 
@@ -8,25 +12,26 @@ class Rectangle(Forme):
     def __init__(self,largeur,hauteur) -> None:
         self.largeur = largeur
         self.hauteur  = hauteur
+        Forme.__init__(self)
 
-    def air(self,largeur,hauteur):
+    def air(self):
         self.aire =  self.largeur * self.hauteur
         return(self.aire)
 
 class Cercle(Forme):
 
-    def __init__(self,radius,largeur,hauteur):
+    def __init__(self,radius):
+        Forme. __init__(self)
         self.radius = radius
-        self.largeur = largeur
-        self.hauteur = hauteur
+        
     
-    def air(self, radius,largeur, hauteur):
-        return  radius*(largeur*hauteur)
+    def air(self):
+        return  self.radius**2*(math.pi)
 
 
 
 instance = Rectangle(3,4)
-instance2 = Cercle(30,50,90)
+instance2 = Cercle(30)
 
-print(instance.air(60,80))
-print(instance2.air(30,40,90,30))
+print(instance.air())
+print(instance2.air())
